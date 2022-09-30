@@ -1,0 +1,28 @@
+#开发环境
+server:
+  port: 443
+
+#datasource
+spring:
+  datasource:
+    #SpringBoot2.1.x之前默认使用的是mysql 5.x版本
+    #driver-class-name: com.mysql.jdbc.Driver
+    #url: jdbc:mysql://localhost:3306/student?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    #username: root
+    #password: 123456
+    #SpringBoot2.1.x以后默认使用的是mysql 8版本，
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://43.154.198.79:3306/sun?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: cqp@2236
+
+
+  #mybatis
+  #mybatis:
+  #mapperLocations: classpath:mapper/*Mapper.xml
+  #type-aliases-package: cqp.sea.pojo.dao.po
+
+#配置日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
